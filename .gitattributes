@@ -1,0 +1,19 @@
+text=lf
+	*.txt linguist-vendored eol=lf
+	*.css linguist-vendored eol=lf
+	*.scss linguist-vendored eol=lf
+	*.js linguist-vendored eol=lf
+	*.gitconfig linguist-vendored eol=lf
+	*.gitignore linguist-vendored eol=lf
+	*.prettierrc linguist-vendored eol=lf
+	*.html linguist-vendored eol=lf
+	*.lock linguist-vendored eol=lf
+	*.gitattributes linguist-vendored eol=lf
+	*.md linguist-vendored eol=lf
+	*.json linguist-vendored eol=lf
+	*.jsx linguist-vendored eol=lf
+  *.ts linguist-vendored eol=lf
+	*.tsx linguist-vendored eol=lf
+	*.editorconfig linguist-vendored eol=lf
+	*.svg linguist-vendored eol=lf
+	CHANGELOG.md export-ignore
