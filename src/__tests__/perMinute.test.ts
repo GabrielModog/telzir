@@ -1,3 +1,9 @@
+import { PerMinuteType } from "../@types";
+
+const calculatePerMinute: PerMinuteType = (value: number, minutes: number) => {
+  return value * minutes;
+};
+
 describe("Calls with FaleMais plans:", () => {
   test("Should return 38 if pass 20 minutes of call between 011 - 016", () => {
     expect(calculatePerMinute(1.9, 20)).toBe(38);
