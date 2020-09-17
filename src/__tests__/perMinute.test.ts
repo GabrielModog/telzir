@@ -1,9 +1,5 @@
+import { calculatePerMinute } from "../utils";
 import callsData from "../data/calls.json";
-import { PerMinuteType } from "../@types";
-
-const calculatePerMinute: PerMinuteType = (value: number, minutes: number) => {
-  return value * minutes;
-};
 
 describe("Calls with FaleMais plans:", () => {
   test("Should return 38 if pass 20 minutes of call between 011 - 016", () => {
