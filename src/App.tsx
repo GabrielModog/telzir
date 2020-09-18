@@ -1,8 +1,9 @@
 import React from 'react';
-import { Col, Row, Container, Form, Card } from 'react-bootstrap';
+import { Col, Row, Container, Form } from 'react-bootstrap';
+import Prices from './components/Prices';
 
 const App: React.FC = () => (
-  <Container fluid="sm">
+  <Container className="w-50" fluid="sm">
     <h1 className="text-center py-4">FaleMais</h1>
     <Row>
       <Form className="w-100">
@@ -40,7 +41,7 @@ const App: React.FC = () => (
             </Form.Group>
           </Col>
           <Col md>
-            <Row className="align-items-center justify-content-center h-100">
+            <Row className="align-items-center justify-content-around h-100">
               <Form.Check inline label="FaleMais30" type="radio" />
               <Form.Check inline label="FaleMais60" type="radio" />
               <Form.Check inline label="FaleMais120" type="radio" />
@@ -49,19 +50,7 @@ const App: React.FC = () => (
         </Row>
       </Form>
     </Row>
-    <Row className="align-items-center justify-content-center pt-4 mt-2">
-      <Card className="w-50">
-        <Card.Body>
-          <Card.Subtitle>Plano Selecionado</Card.Subtitle>
-          <Card.Title>FaleMais30</Card.Title>
-
-          <Row className="justify-content-between px-4 pt-2">
-            <Card.Text>Sem plano $30</Card.Text>
-            <Card.Text>Com plano $30</Card.Text>
-          </Row>
-        </Card.Body>
-      </Card>
-    </Row>
+    <Prices />
     <h6 className="text-center font-weight-light pt-4">Telzir</h6>
   </Container>
 );
