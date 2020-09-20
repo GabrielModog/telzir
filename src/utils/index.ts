@@ -14,7 +14,7 @@ export const calculateWithPlan: WithPlanType = (
 ) => {
   if (currentMinutes > planMinutes)
     return Number(
-      Math.max(0, value * (currentMinutes - planMinutes) * 1.1).toFixed(1)
+      Math.max(0, value * (currentMinutes - planMinutes)).toFixed(1)
     );
 
   return 0;

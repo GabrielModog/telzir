@@ -19,6 +19,7 @@ const Prices = ({
   calls,
   plans,
 }: IPrices) => {
+  // eslint-disable-next-line
   const plan = plans?.find((item: any) => item.value == planCheck);
 
   return (
