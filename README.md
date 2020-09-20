@@ -8,17 +8,17 @@ Actually the client can do some calls to the others cities by paying some tax an
 
 ## Installation
 
-- Clone the repository: github.com/GabrielModog/telzir.git
-- Access the directory: cd telzir
-- Install the dependencies: yarn
-- Run the app: yarn start
+- Clone the repository: `github.com/GabrielModog/telzir.git`
+- Access the directory: `cd telzir`
+- Install the dependencies: `yarn`
+- Run the app: `yarn start`
 
 ## Testing
 
 if the dependencies are installed you can run the
 unit tests suites.
 
-- yarn test
+- `yarn test`
 
 ## Technologies
 
