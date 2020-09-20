@@ -90,6 +90,7 @@ const CallsRecord = ({
                 {plans.map((plan: any) => (
                   <Form.Check
                     inline
+                    key={plan.name}
                     label={plan.name}
                     type="radio"
                     name="planCheck"
