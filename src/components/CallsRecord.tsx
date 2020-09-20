@@ -7,7 +7,7 @@ interface ICallsRecord {
   origin: number;
   destination: number;
   minutes: number;
-  planCheck: string;
+  planCheck?: string;
   onChangeForms: (event: any) => void;
 }
 
@@ -17,7 +17,6 @@ const CallsRecord = ({
   origin,
   destination,
   minutes,
-  planCheck,
   onChangeForms,
 }: ICallsRecord) => {
   return (
@@ -83,10 +82,12 @@ const CallsRecord = ({
               />
             </Form.Group>
           </Col>
+
           <Col md>
-            <Row className="align-items-center justify-content-around h-100">
-              {plans.map((plan: any) => (
-                <div key={plan.name}>
+            <Form.Group className="align-items-center justify-content-center h-100">
+              <Form.Label>Planos</Form.Label>
+              <Row className="align-items-center justify-content-around">
+                {plans.map((plan: any) => (
                   <Form.Check
                     inline
                     label={plan.name}
@@ -96,9 +97,9 @@ const CallsRecord = ({
                     onChange={(evt: any) => onChangeForms(evt)}
                     disabled={Boolean(!destination)}
                   />
-                </div>
-              ))}
-            </Row>
+                ))}
+              </Row>
+            </Form.Group>
           </Col>
         </Row>
       </Form>

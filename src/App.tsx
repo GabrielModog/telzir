@@ -19,8 +19,11 @@ const App: React.FC = () => {
 
   return (
     <Container className="w-50" fluid="sm">
-      <h1 className="text-center py-4">
-        FaleMais<span className="font-weight-light">Telzir</span>
+      <h1 className="text-center text-primary py-4">
+        FaleMais
+        <span className="font-weight-light text-dark">
+          <i>Telzir</i>
+        </span>
       </h1>
       <CallsRecord
         calls={calls}

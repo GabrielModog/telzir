@@ -24,32 +24,35 @@ const Prices = ({
 
   return (
     <Row className="align-items-center justify-content-center pt-4 mt-2">
-      <Card className="w-50">
+      <Card className="w-75">
         <Card.Body>
           <Card.Subtitle>Plano Selecionado</Card.Subtitle>
           {plan ? (
-            <Card.Title>{plan?.name}</Card.Title>
+            <Card.Title className="text-primary">{plan?.name}</Card.Title>
           ) : (
-            <p>Selecione um Plano</p>
+            <i>Selecione um plano</i>
           )}
 
-          <Row className="justify-content-between px-4 pt-2">
-            <Card.Text>
-              Sem plano $
-              {origin && destination
-                ? calculatePerMinute(calls[origin][destination], minutes)
-                : 0}
-            </Card.Text>
-
-            <Card.Text>
+          <Row className="justify-content-around px-4 pt-2">
+            <Card.Text className="h3 text-primary">
               Com plano $
-              {origin && destination
-                ? calculateWithPlan(
-                    calls[origin][destination],
-                    minutes,
-                    plan?.value
-                  )
-                : 0}
+              <u>
+                {origin && destination
+                  ? calculateWithPlan(
+                      calls[origin][destination],
+                      minutes,
+                      plan?.value
+                    )
+                  : 0}
+              </u>
+            </Card.Text>
+            <Card.Text className="h3 text-secondary">
+              Sem plano $
+              <u className="text-">
+                {origin && destination
+                  ? calculatePerMinute(calls[origin][destination], minutes)
+                  : 0}
+              </u>
             </Card.Text>
           </Row>
         </Card.Body>
