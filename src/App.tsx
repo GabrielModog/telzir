@@ -19,7 +19,9 @@ const App: React.FC = () => {
 
   return (
     <Container className="w-50" fluid="sm">
-      <h1 className="text-center py-4">FaleMais</h1>
+      <h1 className="text-center py-4">
+        FaleMais<span className="font-weight-light">Telzir</span>
+      </h1>
       <CallsRecord
         calls={calls}
         plans={plans}
@@ -29,8 +31,14 @@ const App: React.FC = () => {
         planCheck={callInputs?.planCheck}
         onChangeForms={onChangeForms}
       />
-      <Prices />
-      <h6 className="text-center font-weight-light pt-4">Telzir</h6>
+      <Prices
+        origin={callInputs?.origin}
+        destination={callInputs?.destination}
+        minutes={callInputs?.minutes}
+        planCheck={callInputs?.planCheck}
+        calls={calls}
+        plans={plans}
+      />
     </Container>
   );
 };

@@ -1,10 +1,10 @@
-import { PerMinuteType, WithPlanType } from "../@types";
+import { PerMinuteType, WithPlanType } from '../@types';
 
 export const calculatePerMinute: PerMinuteType = (
   value: number,
   minutes: number
 ) => {
-  return value * minutes;
+  return Number(value * minutes).toFixed(1);
 };
 
 export const calculateWithPlan: WithPlanType = (
